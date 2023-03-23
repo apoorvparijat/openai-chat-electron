@@ -1,0 +1,31 @@
+appId: com.openai.chatgpt
+productName: ChatGPT
+directories:
+  output: dist
+  buildResources: icons
+files:
+  - "**/*"
+  - "!node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme,test,__tests__,tests,powered-test,example,examples,*.d.ts}"
+  - "!**/*.{iml,o,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,xproj}"
+  - "!.editorconfig"
+  - "!**/._*"
+  - "!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,__pycache__,thumbs.db,.gitignore,.gitattributes,.flowconfig,.yarn-metadata.json,.idea,appveyor.yml,.travis.yml,circle.yml,.nyc_output,yarn.lock,package-lock.json,npm-debug.log,app-icon.iconset,.npmignore,.babelrc,.circleci,.eslintignore,.eslintrc,.gitkeep,.tern-project,.tm_properties,.vimrc}"
+  - "!icons/*.psd"
+  - "!icons/*.sketch"
+mac:
+  category: public.app-category.utilities
+  target: dmg
+  icon: icons/chatgpt-logo.png
+  type: distribution
+dmg:
+  title: ChatGPT
+  icon: icons/chatgpt-logo.png
+  sign: false
+  contents:
+    - x: 130
+      y: 220
+    - x: 410
+      y: 220
+      type: link
+      path: /Applications
+
